@@ -1,0 +1,11 @@
+<h1 [ngStyle]="{backgroundColor: getColor()}">
+  {{ title }}</h1>
+<p> {{ content }}</p>
+<button
+class="btn-primary"
+(click)="buttonClick()">isTechRelated</button>
+<p *ngIf="isTechRelated; else notTechRelated">Is tech related.</p>
+<ng-template #notTechRelated>
+  <p>
+    Not tech related.</p>
+</ng-template>
